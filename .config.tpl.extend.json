@@ -1,0 +1,29 @@
+{
+  "extend": {
+    "prompt": [
+      {
+        "type": "input",
+        "message": "请输入项目描述",
+        "name": "description",
+        "default": "使用react+typescript+mobx的移动端活动项目"
+      },
+      {
+        "type": "input",
+        "message": "开发服务监听端口",
+        "name": "port",
+        "default": "9973"
+      }
+    ],
+    "updatePkg": {
+      "description": "{{description}}",
+      "scripts": {
+        "start": "cross-env WDS_SOCKET_HOST=localhost WDS_SOCKET_PORT=3249 BUILD_ENV=development PORT={{port}} react-app-rewired start",
+        "dev": "yarn start",
+        "build:testing": "cross-env BUILD_ENV=testing react-app-rewired build",
+        "build:production": "cross-env BUILD_ENV=production react-app-rewired build",
+        "test": "react-app-rewired test",
+        "eject": "react-scripts eject"
+      }
+    }
+  }
+}

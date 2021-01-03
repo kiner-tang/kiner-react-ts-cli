@@ -1,0 +1,66 @@
+.preload-image-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  .progress-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    .progress-bar {
+      width: 100%;
+      height: 30px;
+      border-radius: 30px;
+      border: 5px solid #FFFFFF;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+      .progress-bg {
+        background: #f2f3f7;
+        width: 100%;
+        height: 100%;
+      }
+      .progress-front {
+        background: linear-gradient(to right, #40a9ff, #2e74b0);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        transition: all 500ms;
+      }
+    }
+    .tips {
+      padding: 5px 15px;
+      border-radius: 10px;
+      background: #ffffff;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #40a9ff;
+      text-shadow: 0 0 2px #000000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      white-space: nowrap;
+      transform: translateY(-130%) translateX(-50%);
+      &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 10px solid #ffffff;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        position: absolute;
+        left: 50%;
+        bottom: 2px;
+        transform: translate3d(-50%, 100%, 0);
+      }
+    }
+  }
+}

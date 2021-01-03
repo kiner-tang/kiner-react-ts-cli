@@ -1,0 +1,11 @@
+{
+  "presets": [["mobx", { "modules": "commonjs" }]],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-optional-chaining"
+    ],
+    [
+      "add-module-exports"
+    ]
+  ]
+}

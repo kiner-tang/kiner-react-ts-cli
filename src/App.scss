@@ -1,0 +1,8 @@
+body {
+  height: auto;
+  overflow: auto;
+  &.hidden {
+    height: 100vh;
+    overflow: hidden;
+  }
+}

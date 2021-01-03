@@ -1,0 +1,26 @@
+.bgMusic {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 99;
+  width: 50px;
+  height: 50px;
+  background: url("../assets/images/music-btn.png") no-repeat;
+  background-size: 100px 50px;
+  background-position: 0 0;
+  animation: bgMusicRotate 2s infinite linear;
+  animation-play-state: running;
+  &.stopped {
+    background-position: -50px 0;
+    animation: none;
+  }
+}
+
+@keyframes bgMusicRotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

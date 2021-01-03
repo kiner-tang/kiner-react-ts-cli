@@ -1,0 +1,22 @@
+.image-container {
+  position: relative;
+  .loading-tip {
+    width: 100%;
+    height: 300px;
+    line-height: 300px;
+    background: #f2f3f7;
+    color: #999;
+    text-align: center;
+  }
+  .error-tip {
+    width: 100%;
+    height: 300px;
+    line-height: 300px;
+    background: #f2f3f7;
+    color: orangered;
+    text-align: center;
+  }
+  img {
+    width: 100%;
+  }
+}
